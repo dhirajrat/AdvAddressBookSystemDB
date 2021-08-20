@@ -163,4 +163,31 @@ mysql> SELECT type, COUNT(FirstName) FROM addressbook_service WHERE type = 'Fami
 +------+------------------+
 1 row in set (0.00 sec)
 
+mysql> UPDATE addressbook_service SET type = 'Friends' WHERE FirstName = 'karan';
+Query OK, 1 row affected (0.25 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
 
+mysql> DESCRIBE addressbook_service;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| id          | int unsigned | NO   | PRI | NULL    | auto_increment |
+| FirstName   | varchar(150) | NO   |     | NULL    |                |
+| LastName    | varchar(150) | NO   |     | NULL    |                |
+| City        | varchar(150) | NO   |     | NULL    |                |
+| State       | varchar(150) | NO   |     | NULL    |                |
+| Zip         | double       | NO   |     | NULL    |                |
+| PhoneNumber | double       | NO   |     | NULL    |                |
+| Email       | varchar(150) | NO   |     | NULL    |                |
+| type        | varchar(150) | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+9 rows in set (0.07 sec)
+
+mysql> select * from addressbook_service;
++----+-----------+----------+-------+-------+--------+-------------+------------------+---------+
+| id | FirstName | LastName | City  | State | Zip    | PhoneNumber | Email            | type    |
++----+-----------+----------+-------+-------+--------+-------------+------------------+---------+
+|  1 | Dhiraj    | Rathod   | Nagar | maha  | 414003 |  9604508795 | dhirajrathod3000 | NULL    |
+|  2 | karan     | Rathod   | Nagar | Pune  | 414003 |  9604565566 | karanrathod3000  | Friends |
++----+-----------+----------+-------+-------+--------+-------------+------------------+---------+
+2 rows in set (0.01 sec)
