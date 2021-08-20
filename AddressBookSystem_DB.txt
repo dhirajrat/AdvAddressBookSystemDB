@@ -1,0 +1,56 @@
+Enter password: *********
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.0.26 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE DATABASE addressbook_system;
+Query OK, 1 row affected (0.16 sec)
+
+mysql> use addressbook_system;
+Database changed
+
+mysql> select database();
++--------------------+
+| database()         |
++--------------------+
+| addressbook_system |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> CREATE TABLE addressbook_service
+    -> (
+    -> id      INT unsigned NOT NULL AUTO_INCREMENT,
+    -> FirstName     VARCHAR(150)  NOT NULL,
+    -> LastName      VARCHAR(150)  NOT NULL,
+    -> City          VARCHAR(150)  NOT NULL,
+    -> State         VARCHAR(150)  NOT NULL,
+    -> Zip           DOUBLE NOT NULL,
+    -> PhoneNumber   DOUBLE NOT NULL,
+    -> Email         VARCHAR(150)  NOT NULL,
+    -> PRIMARY KEY   (id)
+    -> );
+Query OK, 0 rows affected (1.12 sec)
+
+mysql> DESCRIBE addressbook_service;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| id          | int unsigned | NO   | PRI | NULL    | auto_increment |
+| FirstName   | varchar(150) | NO   |     | NULL    |                |
+| LastName    | varchar(150) | NO   |     | NULL    |                |
+| City        | varchar(150) | NO   |     | NULL    |                |
+| State       | varchar(150) | NO   |     | NULL    |                |
+| Zip         | double       | NO   |     | NULL    |                |
+| PhoneNumber | double       | NO   |     | NULL    |                |
+| Email       | varchar(150) | NO   |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+8 rows in set (0.04 sec)
+
