@@ -135,4 +135,24 @@ mysql> SELECT FirstName,LastName,City,State,Zip,PhoneNumber,Email FROM addressbo
 +-----------+----------+-------+-------+--------+-------------+------------------+
 2 rows in set (0.02 sec)
 
+mysql> ALTER TABLE addressbook_service ADD type VARCHAR(150) AFTER Email;
+Query OK, 0 rows affected (2.27 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> DESCRIBE addressbook_service;
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| id          | int unsigned | NO   | PRI | NULL    | auto_increment |
+| FirstName   | varchar(150) | NO   |     | NULL    |                |
+| LastName    | varchar(150) | NO   |     | NULL    |                |
+| City        | varchar(150) | NO   |     | NULL    |                |
+| State       | varchar(150) | NO   |     | NULL    |                |
+| Zip         | double       | NO   |     | NULL    |                |
+| PhoneNumber | double       | NO   |     | NULL    |                |
+| Email       | varchar(150) | NO   |     | NULL    |                |
+| type        | varchar(150) | YES  |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+9 rows in set (0.03 sec)
+
 
