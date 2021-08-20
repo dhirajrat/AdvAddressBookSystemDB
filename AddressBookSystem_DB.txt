@@ -118,4 +118,12 @@ mysql> SELECT State FROM addressbook_service WHERE FirstName = 'karan';
 +-------+
 1 row in set (0.03 sec)
 
+mysql> SELECT State, COUNT(FirstName) FROM addressbook_service WHERE State = 'maha';
++-------+------------------+
+| State | COUNT(FirstName) |
++-------+------------------+
+| maha  |                1 |
++-------+------------------+
+1 row in set (0.07 sec)
+
 
