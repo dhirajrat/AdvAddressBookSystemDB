@@ -54,3 +54,19 @@ mysql> DESCRIBE addressbook_service;
 +-------------+--------------+------+-----+---------+----------------+
 8 rows in set (0.04 sec)
 
+mysql> INSERT INTO  addressbook_service (FirstName,LastName,City,State,Zip,PhoneNumber,Email) VALUES ('Dhiraj', 'Rathod', 'Nagar', 'maha', '414003', '9604508795', 'dhirajrathod3000');
+Query OK, 1 row affected (0.75 sec)
+
+mysql> INSERT INTO  addressbook_service (FirstName,LastName,City,State,Zip,PhoneNumber,Email) VALUES ('karan', 'Rathod', 'Nagar', 'maha', '414003', '9604565566', 'karanrathod3000');
+Query OK, 1 row affected (0.22 sec)
+
+mysql> select * from addressbook_service;
++----+-----------+----------+-------+-------+--------+-------------+------------------+
+| id | FirstName | LastName | City  | State | Zip    | PhoneNumber | Email            |
++----+-----------+----------+-------+-------+--------+-------------+------------------+
+|  1 | Dhiraj    | Rathod   | Nagar | maha  | 414003 |  9604508795 | dhirajrathod3000 |
+|  2 | karan     | Rathod   | Nagar | maha  | 414003 |  9604565566 | karanrathod3000  |
++----+-----------+----------+-------+-------+--------+-------------+------------------+
+2 rows in set (0.00 sec)
+
+
