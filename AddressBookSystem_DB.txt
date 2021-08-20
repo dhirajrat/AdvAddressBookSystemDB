@@ -93,3 +93,29 @@ mysql> select * from addressbook_service;
 +----+-----------+----------+-------+-------+--------+-------------+------------------+
 2 rows in set (0.06 sec)
 
+mysql> select * from addressbook_service;
++----+-----------+----------+-------+-------+--------+-------------+------------------+
+| id | FirstName | LastName | City  | State | Zip    | PhoneNumber | Email            |
++----+-----------+----------+-------+-------+--------+-------------+------------------+
+|  1 | Dhiraj    | Rathod   | Nagar | maha  | 414003 |  9604508795 | dhirajrathod3000 |
+|  2 | karan     | Rathod   | Nagar | Pune  | 414003 |  9604565566 | karanrathod3000  |
++----+-----------+----------+-------+-------+--------+-------------+------------------+
+2 rows in set (0.06 sec)
+
+mysql> SELECT City FROM addressbook_service WHERE FirstName = 'karan';
++-------+
+| City  |
++-------+
+| Nagar |
++-------+
+1 row in set (0.02 sec)
+
+mysql> SELECT State FROM addressbook_service WHERE FirstName = 'karan';
++-------+
+| State |
++-------+
+| Pune  |
++-------+
+1 row in set (0.03 sec)
+
+
