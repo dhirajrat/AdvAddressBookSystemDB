@@ -126,4 +126,13 @@ mysql> SELECT State, COUNT(FirstName) FROM addressbook_service WHERE State = 'ma
 +-------+------------------+
 1 row in set (0.07 sec)
 
+mysql> SELECT FirstName,LastName,City,State,Zip,PhoneNumber,Email FROM addressbook_service ORDER BY FirstName;
++-----------+----------+-------+-------+--------+-------------+------------------+
+| FirstName | LastName | City  | State | Zip    | PhoneNumber | Email            |
++-----------+----------+-------+-------+--------+-------------+------------------+
+| Dhiraj    | Rathod   | Nagar | maha  | 414003 |  9604508795 | dhirajrathod3000 |
+| karan     | Rathod   | Nagar | Pune  | 414003 |  9604565566 | karanrathod3000  |
++-----------+----------+-------+-------+--------+-------------+------------------+
+2 rows in set (0.02 sec)
+
 
