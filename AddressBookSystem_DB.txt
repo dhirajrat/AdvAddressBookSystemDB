@@ -155,4 +155,12 @@ mysql> DESCRIBE addressbook_service;
 +-------------+--------------+------+-----+---------+----------------+
 9 rows in set (0.03 sec)
 
+mysql> SELECT type, COUNT(FirstName) FROM addressbook_service WHERE type = 'Family';
++------+------------------+
+| type | COUNT(FirstName) |
++------+------------------+
+| NULL |                0 |
++------+------------------+
+1 row in set (0.00 sec)
+
 
